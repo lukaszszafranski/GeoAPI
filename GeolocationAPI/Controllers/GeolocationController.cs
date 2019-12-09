@@ -40,16 +40,16 @@ namespace GeolocationAPI.Controllers
 
         // GET: api/Geolocation/5
         [HttpGet("{ip}")]
-        public async Task<IActionResult> GetGeolocationData([FromRoute] string IP)
+        public async Task<IActionResult> GetGeolocationData([FromRoute] PostData postData)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState.Values.SelectMany(m => m.Errors).Select(m => m.ErrorMessage).ToList());
             }
 
-            var geolocationData = await _geolocationService.FindByIPAsync(IP);
+            var geolocationData = await _geolocationService.FindByIPAsync(postData.IP);
 
-            if (!_geolocationService.SpecificGeolocationDataExists(IP))
+            if (!_geolocationService.SpecificGeolocationDataExists(postData.IP))
             {
                 return NotFound();
             }
@@ -59,19 +59,19 @@ namespace GeolocationAPI.Controllers
 
         // POST: api/Geolocation
         [HttpPost]
-        public async Task<IActionResult> PostGeolocationData([FromBody] string IP)
+        public async Task<IActionResult> PostGeolocationData([FromBody] PostData postData)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState.Values.SelectMany(m => m.Errors).Select(m => m.ErrorMessage).ToList());
             }
 
-            var ipList = IP.Split(new char[] { ',' }).ToList();
+            var ipList = postData.IP.Split(new char[] { ',' }).ToList();
 
             if (ipList.Count == 1)
             {
                 var httpClient = new HttpClient();
-                var URL = "http://api.ipstack.com/" + IP;
+                var URL = "http://api.ipstack.com/" + postData.IP;
                 var accessKey = "?access_key=496ee18883ec1c0ddfd853d6508abea1";
 
                 var response = await httpClient.GetStringAsync(URL + accessKey);
@@ -141,14 +141,14 @@ namespace GeolocationAPI.Controllers
 
         // DELETE: api/Geolocation/ip
         [HttpDelete("{ip}")]
-        public async Task<IActionResult> DeleteGeolocationData([FromRoute] string IP)
+        public async Task<IActionResult> DeleteGeolocationData([FromRoute] PostData postData)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState.Values.SelectMany(m => m.Errors).Select(m => m.ErrorMessage).ToList());
             }
 
-            var result = await _geolocationService.DeleteAsync(IP);
+            var result = await _geolocationService.DeleteAsync(postData.IP);
 
             if (!result.Success)
             {

@@ -39,7 +39,7 @@ namespace WebApiTests.Tests
         public void FindByIP_WrongIPPassed_ReturnsNotFoundResult()
         {
             // Arrange
-            var IP = "123.456.890.00";
+            var IP = new PostData { IP = "123.456.890.00" };
             // Act
             var notFoundResult = _controller.GetGeolocationData(IP);
 
@@ -51,7 +51,7 @@ namespace WebApiTests.Tests
         public void FindByIP_ExistingIPPassed_ReturnsOkResult()
         {
             // Arrange
-            var IP = "109.131.249.58";
+            var IP = new PostData { IP = "109.131.249.58" };
 
             // Act
             var okResult = _controller.GetGeolocationData(IP);
@@ -64,21 +64,21 @@ namespace WebApiTests.Tests
         public void FindByIP_ExistingIPPassed_ReturnsRightItem()
         {
             // Arrange
-            var IP = "109.131.249.58";
+            var IP = new PostData { IP = "109.131.249.58" };
 
             // Act
             var okResult = _controller.GetGeolocationData(IP).Result as OkObjectResult;
 
             // Assert
             Assert.IsType<GeolocationData>(okResult.Value);
-            Assert.Equal(IP, (okResult.Value as GeolocationData).IP);
+            Assert.Equal(IP.IP, (okResult.Value as GeolocationData).IP);
         }
 
         [Fact]
         public void Post_InvalidIPPassed_ReturnsBadRequest()
         {
             // Arrange
-            var IP = "123";
+            var IP = new PostData { IP = "123" };
 
             // Act
             var badResponse = _controller.PostGeolocationData(IP);
@@ -92,7 +92,7 @@ namespace WebApiTests.Tests
         public void Post_ValidObjectPassed_ReturnsCreatedResponse()
         {
             // Arrange
-            var IP = "142.83.211.45";
+            var IP = new PostData { IP = "142.83.211.45" };
 
             // Act
             var createdResponse = _controller.PostGeolocationData(IP).Result;
@@ -105,7 +105,7 @@ namespace WebApiTests.Tests
         public void Delete_NotExistingIPPassed_ReturnsNotFoundResponse()
         {
             // Arrange
-            var IP = "123.456.789.00";
+            var IP = new PostData { IP = "123.456.789.00" };
 
             // Act
             var badResponse = _controller.DeleteGeolocationData(IP);
@@ -118,7 +118,7 @@ namespace WebApiTests.Tests
         public void Delete_ExistingIPPassed_RemovesOneItem()
         {
             // Arrange
-            var IP = "109.131.249.59";
+            var IP = new PostData { IP = "109.131.249.59" };
 
             // Act
             var okResponse = _controller.DeleteGeolocationData(IP);
