@@ -12,7 +12,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This project is REST API, working for json as input and output, working with another API to get, add and remove geolocation data from azure database.
+This project is REST API, working with json as input and output, working with another API to get, add and remove geolocation data from azure database.
 
 ### Built With
 * ASP.NET Core WebAPI
