@@ -23,7 +23,7 @@ This project is a REST API, working with json as input and output and another AP
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps:
+To get a local copy up and running follow these simple steps:
 
 ### Prerequisites
 * Docker
