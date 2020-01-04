@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeolocationAPI\GeolocationAPI.csproj" />
+    <ProjectReference Include="..\StockAPI\StockAPI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

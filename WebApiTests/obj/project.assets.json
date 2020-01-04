@@ -3337,7 +3337,7 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "GeolocationAPI/1.0.0": {
+      "StockAPI/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
@@ -3352,10 +3352,10 @@
           "Swashbuckle.AspNetCore": "4.0.1"
         },
         "compile": {
-          "bin/placeholder/GeolocationAPI.dll": {}
+          "bin/placeholder/StockAPI.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GeolocationAPI.dll": {}
+          "bin/placeholder/StockAPI.dll": {}
         }
       }
     }
@@ -9821,18 +9821,18 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "GeolocationAPI/1.0.0": {
+    "StockAPI/1.0.0": {
       "type": "project",
-      "path": "../GeolocationAPI/GeolocationAPI.csproj",
-      "msbuildProject": "../GeolocationAPI/GeolocationAPI.csproj"
+      "path": "../StockAPI/StockAPI.csproj",
+      "msbuildProject": "../StockAPI/StockAPI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "GeolocationAPI >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
       "Microsoft.NET.Test.Sdk >= 15.8.0",
       "Microsoft.NETCore.App >= 2.1.0",
+      "StockAPI >= 1.0.0",
       "xunit >= 2.3.1",
       "xunit.runner.visualstudio >= 2.3.1"
     ]
@@ -9844,11 +9844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Łukasz Szafrański\\source\\repos\\GeolocationAPI\\WebApiTests\\WebApiTests.csproj",
+      "projectUniqueName": "C:\\Users\\Łukasz Szafrański\\GitHubDesktop\\StockExchange\\WebApiTests\\WebApiTests.csproj",
       "projectName": "WebApiTests",
-      "projectPath": "C:\\Users\\Łukasz Szafrański\\source\\repos\\GeolocationAPI\\WebApiTests\\WebApiTests.csproj",
+      "projectPath": "C:\\Users\\Łukasz Szafrański\\GitHubDesktop\\StockExchange\\WebApiTests\\WebApiTests.csproj",
       "packagesPath": "C:\\Users\\Łukasz Szafrański\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Łukasz Szafrański\\source\\repos\\GeolocationAPI\\WebApiTests\\obj\\",
+      "outputPath": "C:\\Users\\Łukasz Szafrański\\GitHubDesktop\\StockExchange\\WebApiTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9867,8 +9867,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Łukasz Szafrański\\source\\repos\\GeolocationAPI\\GeolocationAPI\\GeolocationAPI.csproj": {
-              "projectPath": "C:\\Users\\Łukasz Szafrański\\source\\repos\\GeolocationAPI\\GeolocationAPI\\GeolocationAPI.csproj"
+            "C:\\Users\\Łukasz Szafrański\\GitHubDesktop\\StockExchange\\StockAPI\\StockAPI.csproj": {
+              "projectPath": "C:\\Users\\Łukasz Szafrański\\GitHubDesktop\\StockExchange\\StockAPI\\StockAPI.csproj"
             }
           }
         }

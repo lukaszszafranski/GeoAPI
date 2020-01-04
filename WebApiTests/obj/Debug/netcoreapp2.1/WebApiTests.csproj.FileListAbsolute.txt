@@ -17,3 +17,9 @@ C:\Users\Łukasz Szafrański\source\repos\GeolocationAPI\WebApiTests\bin\Debug\n
 C:\Users\Łukasz Szafrański\source\repos\GeolocationAPI\WebApiTests\bin\Debug\netcoreapp2.1\GeolocationAPI.pdb
 C:\Users\Łukasz Szafrański\source\repos\GeolocationAPI\WebApiTests\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.xml
 C:\Users\Łukasz Szafrański\source\repos\GeolocationAPI\WebApiTests\obj\Debug\netcoreapp2.1\WebApiTests.csproj.CopyComplete
+C:\Users\Łukasz Szafrański\GitHubDesktop\StockExchange\WebApiTests\obj\Debug\netcoreapp2.1\WebApiTests.csprojAssemblyReference.cache
+C:\Users\Łukasz Szafrański\GitHubDesktop\StockExchange\WebApiTests\obj\Debug\netcoreapp2.1\WebApiTests.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz Szafrański\GitHubDesktop\StockExchange\WebApiTests\obj\Debug\netcoreapp2.1\WebApiTests.AssemblyInfoInputs.cache
+C:\Users\Łukasz Szafrański\GitHubDesktop\StockExchange\WebApiTests\obj\Debug\netcoreapp2.1\WebApiTests.AssemblyInfo.cs
+C:\Users\Łukasz Szafrański\GitHubDesktop\StockExchange\WebApiTests\obj\Debug\netcoreapp2.1\WebApiTests.dll
+C:\Users\Łukasz Szafrański\GitHubDesktop\StockExchange\WebApiTests\obj\Debug\netcoreapp2.1\WebApiTests.pdb
